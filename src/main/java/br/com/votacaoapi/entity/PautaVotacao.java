@@ -22,17 +22,17 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "PAUTA_VOTACAO")
+//@Table(name = "PAUTA_VOTACAO")
 public class PautaVotacao implements Serializable {
 
 	private static final long serialVersionUID = 7596951562145894517L;
 
-	@Id
-	@SequenceGenerator(name = "pauta_votacao_seq", sequenceName = "pauta_votacao_seq", allocationSize = 1)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pauta_votacao_seq")
+//	@Id
+//	@SequenceGenerator(name = "pauta_votacao_seq", sequenceName = "pauta_votacao_seq", allocationSize = 1)
+//	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pauta_votacao_seq")
 	private Long id;
 
-	@Column(name = "NOME")
+//	@Column(name = "NOME")
 	private String nome;
 
 }

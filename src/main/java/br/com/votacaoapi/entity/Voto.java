@@ -12,6 +12,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -44,4 +45,13 @@ public class Voto implements Serializable {
 	@ManyToOne(fetch = FetchType.EAGER)
 	private PautaVotacao pautaVotacao;
 	
+	@JsonIgnore
+    public boolean isNew() {
+        return getId() == null;
+    }
+
+    @JsonIgnore
+    public boolean alreadyExist() {
+        return getId() != null;
+    }
 }
